@@ -61,4 +61,33 @@ authors:5910
 first-published:1968-02-01
 latest-published:2022-06-01
 ```
+## Graphs
+  
+  All graphs are compiled with -c 0, thus only RFCs are included that have the search term in the Title/Keyword section of the index.
+  The chain parameter c should be increased carefully, values of 1 and 2 should be enough, otherwise the graph soon becomes very large.
+  
+  The graph will load dynamically each time the html file is opened in the browser. Static loading (compile it once and then save node and edge positions) is possible, however to the best of my knowledge there exists no automatic functionality for this yet (Happy to collaborate on automating this).
+  
+  The manual process to make pyvis static, includes the following steps.
 
+  1) Render Graph in Browser -> F12 Console
+  Copy output to clipboard
+  ```
+  network.storePositions();
+  console.log(JSON.stringify(data.nodes.get()))
+  ```
+  2) Edit html file (Optional: cp html to file_static.html)
+
+  - Comment out loadbar div (not needed anymore)
+  - Comment out loadbar js/css (optional)
+  - Set physics options to false
+    ```
+      "physics": {
+        "enabled": false,
+        "repulsion": {
+    ```
+  - goto nodes = and copy output from 1) to the vis.DataSet array
+
+Save and done!
+
+  
