@@ -6,20 +6,89 @@
     <meta name="author" content="" />
     <title>RFC  View</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
-    <!--<link href="css/bootstrap.min.css" rel="stylesheet" />-->
 
-    <!-- Custom CSS -->
-    <!--<link href="css/holzsec.css" rel="stylesheet" />-->
+    <style> 
+          body{
+               background-color: grey;
+               background-image: url("img/bgrfcview.png");
+               font-family: monospace;
+               margin: 1rem;
+          }
 
+          a {
+                text-decoration: none; 
+                color: white;
+
+          }
+          a:hover{
+               font-weight: bold;
+          }
+
+          .heading{            
+               width: 100vw;
+               height: 100vh;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+          }
+
+          .highlight{
+               color: white;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               flex-direction: column;
+               background-color: #018786;
+               opacity: 0.75;
+               padding: 2rem;
+               border-radius:  0.5rem;
+               box-shadow: 0px 0px 0.5rem 0.3rem rgba(0, 0, 0, 0.4);          
+          }
+
+          .highlight > h1 {
+               font-size: 40;
+          }
+
+
+          .highlight > a {
+               font-size: 20;
+               margin-bottom: 1rem;
+          }
+
+          .sm {
+               margin-top: 2rem;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               flex-direction: column;
+          }
+
+          .sm > a {
+                font-size: 16;
+                margin-bottom: 0.5rem;
+          }
+
+          .logo{
+               font-size: 20 !important;
+          }
+
+     </style>
 </head>
 <body>
-   <section>
-        <h1 class=header>RFC View</h1>
-   </section>
-
-   <main class="container py-5">
-        <a href="graphs/dns.html" target="_blank">DNS-related RFCs</a>
-   </main>
+     <div class="heading">
+          <div class="highlight">
+               <h1>RFC View</h1>
+               <a href="graphs/all_static.html" target="_blank">All RFCs</a> <br>
+               <a href="graphs/dns.html" target="_blank">DNS-related RFCs</a> <br>
+               <a href="graphs/mail.html" target="_blank">Mail-related RFCs</a>
+               <div class="sm">
+                    <a href="https://github.com/holzsec/rfcview" target="_blank">Github</a> <br>
+                    <a class="logo" href="https://twitter.com/holzsec" target="_blank">🐤</a>
+               
+               </div>
+          </div>     
+     </div>
 
 </body>
 
