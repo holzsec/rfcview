@@ -1,11 +1,14 @@
 # RFCView
-RFC Viewer - Visualizes RFC updates and obsoletes, performs searches on RFCs
-
-Requirements: pip3 install networkx pyvis xmltodict
-
+RFC Viewer - Visualizes RFC updates and obsoletes, performs searches on RFCs. 
 Is based on the RFC Index (https://www.rfc-editor.org/in-notes/rfc-index.xml)
-Current file included in the repo: 2022-06-15
+> Current file included in the repo: 2022-06-15
 
+
+Requirements: `pip3 install networkx pyvis xmltodict`
+
+
+
+```
 usage: rfc.py [-h] -f FILE [-s SEARCH] [-i INDEXFIELDS] [-c CHAIN]
               [-o OUTPUTFILE] [-v OUTPUTVALUES] [-l]
 
@@ -26,13 +29,13 @@ options:
                         Output values/fields (display with --list-outputvalues)
   -l, --list-outputvalues
                         Lists output values/fields for outputfile
-
+```
 
 Output:
 
 1) Interactive Network Graph in graphs/<search keyword>.html
 
-![Example graph for IPv6 as keyword](img/rfcvis.jpg?raw=true "Example for IPv6 Search")
+![Example graph for IPv6 as keyword](/img/rfcvis.png)
 
 2) CSV with matching RFCs, e.g.
 ```
